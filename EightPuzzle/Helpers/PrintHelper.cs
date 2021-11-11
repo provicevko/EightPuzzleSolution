@@ -10,14 +10,15 @@ namespace EightPuzzle.Helpers
     {
         public static void PrintResult<T>(this IEnumerable<T> enumerable) where T : IEnumerable<byte>
         {
-            foreach (var elem in enumerable)
-            {
-                foreach (var x in elem)
+            if (enumerable != null)
+                foreach (var elem in enumerable)
                 {
-                    Console.Write($"{x} ");
+                    foreach (var x in elem)
+                    {
+                        Console.Write($"{x} ");
+                    }
+                    Console.WriteLine();
                 }
-                Console.WriteLine();
-            }
         }
     }
 }
