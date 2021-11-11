@@ -59,7 +59,7 @@ namespace EightPuzzle.Services
 
         private IEnumerable<byte[]> GetPathToEndState(ref IDictionary<byte[], byte[]> visited)
         {
-            if (visited == null || visited.Count == 0)
+            if (visited == null)
                 throw new ArgumentException(nameof(visited));
 
             if (!visited.ContainsKey(EndState))
